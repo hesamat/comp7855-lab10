@@ -46,12 +46,6 @@ Create tests/test_validators.py and write parametrized tests for the pure functi
    - None handling
    - Conversion of student_id to string
 
-### Key learning outcomes
-
-1. Translate equivalence partition tables into @pytest.mark.parametrize
-2. Use the AAA pattern in practice
-3. Observe current behavior for whitespace-only strings in validate_profile_data (this may reveal a bug worth discussing)
-
 ### Suggested scope
 
 1. 8 to 10 parametrized test cases for validate_profile_data
@@ -79,12 +73,6 @@ Create tests/conftest.py with shared fixtures.
      - db.collection().document().get()
      - db.collection().document().set()
      - db.collection().document().update()
-
-### Key learning outcomes
-
-1. Use pytest fixtures as dependency injection
-2. Patch objects at the import location your code uses
-3. Build chained Firestore behavior with MagicMock
 
 ### Guidance
 
@@ -121,13 +109,6 @@ Create tests/test_api_profile.py and write integration tests for profile CRUD en
 7. test_update_profile_invalid_field
    - PUT {"age": 25}, expect 400 and whitelist error message
 
-### Key learning outcomes
-
-1. Validate auth decorators through endpoint tests
-2. Combine fixtures in one test (client + mock_firebase_auth + mock_firestore)
-3. Assert important mock interactions with assert_called_once_with
-4. Verify JSON error structure and messages
-
 ---
 
 ## Task 4: Testing Device Authentication
@@ -144,12 +125,6 @@ Create tests/test_api_sensor.py and test the require_api_key decorator path.
 
 3. test_sensor_data_valid_key
    - Correct key + valid JSON returns 201
-
-### Key learning outcomes
-
-1. Use mocker.patch.dict(os.environ, {...}) to control API key configuration in tests
-2. Compare testing patterns for JWT auth and API key auth
-3. Mock Firestore writes for sensor ingestion endpoint
 
 ---
 
