@@ -15,13 +15,17 @@ The goal is to make your app testable without real Firebase credentials or netwo
 
 ## Quick Setup (One-Time)
 
-1. Install dependencies:
+1. Create and activate a virtual environment:
+   - python -m venv .venv
+   - .\\.venv\\Scripts\\Activate.ps1
+
+2. Install dependencies:
    - pip install -r requirements.txt
    - pip install pytest pytest-cov
 
-2. Make sure your project runs locally before starting tests.
+3. Make sure your project runs locally before starting tests.
 
-3. Run tests with:
+4. Run tests with:
    - pytest tests/ -v
    - pytest tests/ --cov=utils --cov=blueprints --cov=decorators
 
@@ -58,7 +62,7 @@ Create tests/test_validators.py and write parametrized tests for the pure functi
 
 A starter tests/conftest.py is provided. Complete it and adjust it to match your code paths.
 
-### Fixtures to build
+### Fixtures to complete
 
 1. client
    - Flask test client with TESTING = True
