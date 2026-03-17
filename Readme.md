@@ -156,12 +156,12 @@ tests/
 .github/
 └── workflows/
    └── ci.yml               # Starter GitHub Actions workflow running pytest on push
+```
 
 CI proof (include in your submission):
 - One screenshot of a successful (green) GitHub Actions run
 - The commit SHA that triggered that run
 - The GitHub Actions run URL
-```
 
 ---
 
